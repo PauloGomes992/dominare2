@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Morador</title>
+    <link rel="stylesheet" th:href="@{css/style.css}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cadastro de Morador</h1>
+        <form th:action="@{/cadastro}" th:object="${morador}" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" th:field="*{nome}" placeholder="Digite o nome: " required>
+
+            <label for="preco">Nascimento:</label>
+            <input type="text" id="nascimento" th:field="*{nascimento}" placeholder="Digite o Nascimento: " required>
+
+            <label for="preco">CPF:</label>
+            <input type="text" id="cpf" th:field="*{cpf}" placeholder="Digite o CPF: " required>
+
+            <label for="preco">Telefon:</label>
+            <input type="text" id="telefone" th:field="*{telefone}" placeholder="Digite o telefone: " required>
+
+            <label for="preco">Bloco:</label>
+            <input type="text" id="bloco" th:field="*{bloco}" placeholder="Digite o bloco: " required>
+
+            <label for="preco">Apartamento:</label>
+            <input type="text" id="apartamento" th:field="*{apartamento}" placeholder="Digite o Preço: " required>
+
+            <label for="preco">Relação:</label>
+            <input type="text" id="relacao" th:field="*{relacao}" placeholder="Digite a relação: " required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+        <a th:href="@{/}">Voltar para Lista de Moradores</a>
+    </div>
+</body>
+
+</html>
+

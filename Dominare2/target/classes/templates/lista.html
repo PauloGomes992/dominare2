@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Produtos</title>
+  <link rel="stylesheet" th:href="@{css/style.css}">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Lista de Moradores</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Preço</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="morador : ${moradores}">
+          <td th:text="${morador.id}">ID do Morador</td>
+          <td th:text="${morador.nome}">Nome do Morador</td>
+          <td th:text="${morador.cpf}">CPF do Morador</td>
+          <td th:text="${morador.telefone}">Telefone do Morador</td>
+          <td th:text="${morador.bloco}">Bloco do Morador</td>
+          <td th:text="${morador.apartamento}">Apartamento do Morador</td>
+          <td th:text="${morador.relacao}">Relação do Morador</td>
+        </tr>
+      </tbody>
+    </table>
+    <a th:href="@{/cadastro}">Cadastrar novo Morador</a>
+  </div>
+</body>
+
+</html>
